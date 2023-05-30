@@ -1,0 +1,617 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <title>HiBeautee | {{$title}}</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="assets/css/fontawesome.css">
+    <link rel="stylesheet" href="assets/css/templatemo-plot-listing.css">
+    <link rel="stylesheet" href="assets/css/animated.css">
+    <link rel="stylesheet" href="assets/css/owl.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+<!--
+
+TemplateMo 564 Plot Listing
+
+https://templatemo.com/tm-564-plot-listing
+
+-->
+
+  </head>
+
+<body>
+
+  <!-- ***** Preloader Start ***** -->
+  <div id="js-preloader" class="js-preloader">
+    <div class="preloader-inner">
+      <span class="dot"></span>
+      <div class="dots">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </div>
+  <!-- ***** Preloader End ***** -->
+
+  <!-- ***** Header Area Start ***** -->
+  <header class="header-area header-sticky wow slideInDown" data-wow-duration="0.75s" data-wow-delay="0s">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <nav class="main-nav">
+            <!-- ***** Logo Start ***** -->
+            <font style="font-size: 50px;
+            font-weight: bold; 
+            color: dimgray;
+            text-align: center;" 
+            >HiBeautee!</font>
+            <!-- ***** Logo End ***** -->
+            <!-- ***** Menu Start ***** -->
+            <ul class="nav">
+            <li><a href="/home">Home</a></li>
+              <li><a href="/product" class="active">Product</a></li>
+              @if (session()->exists("pengguna"))
+              <li>
+                <div class="dropdown">
+                  <a href="/pemesanan">Pemesanan</a>
+                  <div class="dropdown-content">
+                    <a href="/tiket">Tiket Saya</a>
+                  </div>
+                </li>
+              @else
+              <li><a href="/pemesanan">Pemesanan</a></li>
+              @endif
+              
+              <li><a href="/contacus">Contact Us</a></li> 
+              @if (session()->exists("pengguna"))
+              <li>
+                <div class="dropdown">
+                <a href="/pemesanan">Hy, {{Session::get('pengguna')['NamaUser']}}</a>
+                <div class="dropdown-content">
+                  <a href="/LogoutUser">Logout</a>
+                </div>
+              </li> 
+              @else
+              <li><div class="main-white-button"><a href="/login"><i class="fa fa-plus"></i> LOGIN</a></div></li> 
+            </ul>        
+              @endif
+              
+            <a class='menu-trigger'>
+                <span>Menu</span>
+            </a>
+            <!-- ***** Menu End ***** -->
+          </nav>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- ***** Header Area End ***** -->
+
+  <div class="main-banner">
+    <div class="container">
+      <div class="row">
+      
+
+             
+            </div>
+        
+        </div>
+        <div class="col-lg-10 offset-lg-1">
+          
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="popular-categories">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="section-heading">
+            <h2>Popular Categories</h2>
+            <h6>Check Them Out</h6>
+          </div>
+        </div>
+        <div class="col-lg-12">
+          <div class="naccs">
+            <div class="grid">
+              <div class="row">
+                <div class="col-lg-3">
+                  <div class="menu">
+                    <div class="first-thumb active">
+                      <div class="thumb">
+                        <span class="icon"><img src="assets/images/search-icon-01.png" alt=""></span>
+                        Klinik
+                      </div>
+                    </div>
+                    <div>
+                      <div class="thumb">                 
+                        <span class="icon"><img src="assets/images/search-icon-02.png" alt=""></span>
+                        Skincare
+                      </div>
+                    </div>
+                    <div>
+                      <div class="thumb">                 
+                        <span class="icon"><img src="assets/images/search-icon-03.png" alt=""></span>
+                        Treatment
+                      </div>
+                    </div>
+                  </div>
+                </div> 
+                <div class="col-lg-9 align-self-center">
+                  <ul class="nacc">
+                    <li class="active">
+                      <div>
+                        <div class="thumb">
+                          <div class="row">
+                            <div class="col-lg-5 align-self-center">
+                              <div class="left-text">
+                                <h4>Recommendations for trusted beauty clinics</h4>
+                                <p>To choose the right beauty clinic, you can find out what type of treatment is needed,
+                                   the credibility and certification of the doctor and clinic, or even the price and location.</p>
+                                <div class="main-white-button"><a href="#"><i class="fa fa-eye"></i> Discover More</a></div>
+                              </div>
+                            </div>
+                            <div class="col-lg-7 align-self-center">
+                              <div class="right-image">
+                                <img src="assets/images/klinik.jpg" alt="">
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div>
+                        <div class="thumb">
+                          <div class="row">
+                            <div class="col-lg-5 align-self-center">
+                              <div class="left-text">
+                                <h4>The best skincare products in 2023</h4>
+                                <p>As the number one website-based beauty platform in Indonesia, 
+                                  HiBeautee! diligently organizes the Best of Beauty Awards every year to find the best beauty products.</p>
+                                <div class="main-white-button"><a href="#"><i class="fa fa-eye"></i> Explore More</a></div>
+                              </div>
+                            </div>
+                            <div class="col-lg-7 align-self-center">
+                              <div class="right-image">
+                                <img src="assets/images/skincare.jpg" alt="Foods on the table">
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div>
+                        <div class="thumb">
+                          <div class="row">
+                            <div class="col-lg-5 align-self-center">
+                              <div class="left-text">
+                                <h4>Facial treatment to help solve your skin problems!</h4>
+                                <p>Did you know? Beauty clinics offer a variety of services related to skin health and beauty, such as facials, peels, or hair removal.</p>
+                                <div class="main-white-button"><a href="listing.html"><i class="fa fa-eye"></i> More Listing</a></div>
+                              </div>
+                            </div>
+                            <div class="col-lg-7 align-self-center">
+                              <div class="right-image">
+                                <img src="assets/images/treatment.webp" alt="cars in the city">
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div>
+                        <div class="thumb">
+                          <div class="row">
+                            <div class="col-lg-5 align-self-center">
+                              <div class="left-text">
+                                <h4>Shopping List: Images from Unsplash</h4>
+                                <p>Image credits go to Unsplash website that provides free stock photos for anyone. Images used in this Plot Listing template are from Unsplash.</p>
+                                <div class="main-white-button"><a href="#"><i class="fa fa-eye"></i> Discover More</a></div>
+                              </div>
+                            </div>
+                            <div class="col-lg-7 align-self-center">
+                              <div class="right-image">
+                                <img src="assets/images/tabs-image-04.jpg" alt="Shopping Girl">
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div>
+                        <div class="thumb">
+                          <div class="row">
+                            <div class="col-lg-5 align-self-center">
+                              <div class="left-text">
+                                <h4>Information and Safety Tips for Traveling</h4>
+                                <p>You are allowed to use this template for your commercial websites. You are NOT allowed to redistribute this template ZIP file on any Free CSS collection websites.</p>
+                                <div class="main-white-button"><a rel="nofollow" href="https://templatemo.com/contact"><i class="fa fa-eye"></i> Read More</a></div>
+                              </div>
+                            </div>
+                            <div class="col-lg-7 align-self-center">
+                              <div class="right-image">
+                                <img src="assets/images/tabs-image-05.jpg" alt="Traveling Beach">
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>          
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="recent-listing">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="section-heading">
+            <h2>Recent Listing</h2>
+            <h6>Check Them Out</h6>
+          </div>
+        </div>
+        <div class="col-lg-12">
+          <div class="owl-carousel owl-listing">
+            <div class="item">
+              <div class="row">
+                <div class="col-lg-12">
+                  <div class="listing-item">
+                    <div class="left-image">
+                      <a href="#"><img src="assets/images/msglow.png" alt=""></a>
+                    </div>
+                    <div class="right-content align-self-center">
+                      <a href="#"><h4>1. Ms Glow Clinic</h4></a>
+                      <h6>by: Sale Agent</h6>
+                      <ul class="rate">
+                        <li><i class="fa fa-star-o"></i></li>
+                        <li><i class="fa fa-star-o"></i></li>
+                        <li><i class="fa fa-star-o"></i></li>
+                        <li><i class="fa fa-star-o"></i></li>
+                        <li><i class="fa fa-star-o"></i></li>
+                        <li>(18) Reviews</li>
+                      </ul>
+                      <span class="price"><div class="icon"><img src="assets/images/listing-icon-01.png" alt=""></div> Rp 500.000,00-Rp 20.000.000,00</span>
+                      <span class="details">Lokasi: <em>Pandansari, Tegal Tanda, Banguntapan, Kec. Banguntapan</em></span>
+                      <ul class="info">
+                        <li><img src="assets/images/dokter-icon.png" alt=""> dr. Salma</li>
+                        <li><img src="assets/images/jam-icon.webp" alt=""> 09:00 - 19:00</li>
+                      </ul>
+                      <div class="main-white-button">
+                        <a href="contact.html"><i class="fa fa-eye"></i> Contact Now</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-12">
+                  <div class="listing-item">
+                    <div class="left-image">
+                      <a href="#"><img src="assets/images/bening.jpg" alt=""></a>
+                    </div>
+                    <div class="right-content align-self-center">
+                      <a href="#"><h4>2. Bening's Clinic</h4></a>
+                      <h6>by: Top Sale Agent</h6>
+                      <ul class="rate">
+                        <li><i class="fa fa-star-o"></i></li>
+                        <li><i class="fa fa-star-o"></i></li>
+                        <li><i class="fa fa-star-o"></i></li>
+                        <li><i class="fa fa-star-o"></i></li>
+                        <li><i class="fa fa-star-o"></i></li>
+                        <li>(24) Reviews</li>
+                      </ul>
+                      <span class="price"><div class="icon"><img src="assets/images/listing-icon-01.png" alt=""></div> Rp 1.000.000,00-Rp 20.000.000,00</span>
+                      <span class="details">Lokasi: <em>Jl. Raya Pajajaran No.8, RT.004/RW.005</em></span>
+                      <ul class="info">
+                        <li><img src="assets/images/dokter-icon.png" alt=""> dr. Salma</li>
+                        <li><img src="assets/images/jam-icon.webp" alt=""> 09:00 - 19:00</li>
+                      </ul>
+                      <div class="main-white-button">
+                        <a href="contact.html"><i class="fa fa-eye"></i> Contact Now</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-12">
+                  <div class="listing-item">
+                    <div class="left-image">
+                      <a href="#"><img src="assets/images/erha.jpg" alt=""></a>
+                    </div>
+                    <div class="right-content align-self-center">
+                      <a href="#"><h4>3. Erha Clinic</h4></a>
+                      <h6>by: Best Beauty</h6>
+                      <ul class="rate">
+                        <li><i class="fa fa-star-o"></i></li>
+                        <li><i class="fa fa-star-o"></i></li>
+                        <li><i class="fa fa-star-o"></i></li>
+                        <li><i class="fa fa-star-o"></i></li>
+                        <li><i class="fa fa-star-o"></i></li>
+                        <li>(36) Reviews</li>
+                      </ul>
+                      <span class="price"><div class="icon"><img src="assets/images/listing-icon-01.png" alt=""></div> Rp 300.000,00-Rp 10.000.000,00</span>
+                      <span class="details">Lokasi: <em>Sukmajaya, Kec. Jombang, Kota Cilegon</em></span>
+                      <ul class="info">
+                        <li><img src="assets/images/dokter-icon.png" alt=""> dr. Salma</li>
+                        <li><img src="assets/images/jam-icon.webp" alt=""> 09:00 - 19:00</li>
+                      </ul>
+                      <div class="main-white-button">
+                        <a href="contact.html"><i class="fa fa-eye"></i> Contact Now</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="row">
+                <div class="col-lg-12">
+                  <div class="listing-item">
+                    <div class="left-image">
+                      <a href="#"><img src="assets/images/dermaster.jpg" alt=""></a>
+                    </div>
+                    <div class="right-content align-self-center">
+                      <a href="#"><h4>4. Dermaster Clinic</h4></a>
+                      <h6>by: Sale Agent</h6>
+                      <ul class="rate">
+                        <li><i class="fa fa-star-o"></i></li>
+                        <li><i class="fa fa-star-o"></i></li>
+                        <li><i class="fa fa-star-o"></i></li>
+                        <li><i class="fa fa-star-o"></i></li>
+                        <li><i class="fa fa-star-o"></i></li>
+                        <li>(24) Reviews</li>
+                      </ul>
+                      <span class="price"><div class="icon"><img src="assets/images/listing-icon-01.png" alt=""></div> Rp 500.000,00-Rp 15.000.000,00</span>
+                      <span class="details">Lokasi: <em>Jl. Dharma Husada Indah Bar. I No.3C, Mojo, Kec. Gubeng, Surabaya Timur, Jawa Timur </em></span>
+                      <ul class="info">
+                        <li><img src="assets/images/dokter-icon.png" alt="">dr.Wahyu</li>
+                        <li><img src="assets/images/jam-icon.webp" alt="">09:00 - 19:00</li>
+                      </ul>
+                      <div class="main-white-button">
+                        <a href="contact.html"><i class="fa fa-eye"></i> Contact Now</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-12">
+                  <div class="listing-item">
+                    <div class="left-image">
+                      <a href="#"><img src="assets/images/natasha.jpeg" alt=""></a>
+                    </div>
+                    <div class="right-content align-self-center">
+                      <a href="#"><h4>5. Natasha Clinic</h4></a>
+                      <h6>by: Sale Agent</h6>
+                      <ul class="rate">
+                        <li><i class="fa fa-star-o"></i></li>
+                        <li><i class="fa fa-star-o"></i></li>
+                        <li><i class="fa fa-star-o"></i></li>
+                        <li><i class="fa fa-star-o"></i></li>
+                        <li><i class="fa fa-star-o"></i></li>
+                        <li>(32) Reviews</li>
+                      </ul>
+                      <span class="price"><div class="icon"><img src="assets/images/listing-icon-01.png" alt=""></div> Rp 500.000,00-Rp 15.000.000,00</span>
+                      <span class="details">Lokasi : <em>Jl. Walikota Mustajab No.58, Ketabang, Kec. Genteng, Kota SBY</em></span>
+                      <ul class="info">
+                        <li><img src="assets/images/dokter-icon.png" alt=""> dr. Wahyu</li>
+                        <li><img src="assets/images/jam-icon.webp" alt=""> 09:00 - 19:00</li>
+                      </ul>
+                      <div class="main-white-button">
+                        <a href="contact.html"><i class="fa fa-eye"></i> Contact Now</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-12">
+                  <div class="listing-item">
+                    <div class="left-image">
+                      <a href="#"><img src="assets/images/zap.jpg" alt=""></a>
+                    </div>
+                    <div class="right-content align-self-center">
+                      <a href="#"><h4>6. Zap Clinic</h4></a>
+                      <h6>by: Sale Agent</h6>
+                      <ul class="rate">
+                        <li><i class="fa fa-star-o"></i></li>
+                        <li><i class="fa fa-star-o"></i></li>
+                        <li><i class="fa fa-star-o"></i></li>
+                        <li><i class="fa fa-star-o"></i></li>
+                        <li><i class="fa fa-star-o"></i></li>
+                        <li>(40) Reviews</li>
+                      </ul>
+                      <span class="price"><div class="icon"><img src="assets/images/listing-icon-01.png" alt=""></div> Rp 500.000,00-Rp 15.000.000,00</span>
+                      <span class="details">Lokasi: <em>Jl. Sidodadi IV No.16, RT.006/RW.02, Simolawang, Kec. Simokerto, Kota SBY</em></span>
+                      <ul class="info">
+                        <li><img src="assets/images/dokter-icon.png" alt=""> dr. Wahyu</li>
+                        <li><img src="assets/images/jam-icon.webp" alt=""> 09:00 - 19:00</li>
+                      </ul>
+                      <div class="main-white-button">
+                        <a href="contact.html"><i class="fa fa-eye"></i> Contact Now</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="row">
+                <div class="col-lg-12">
+                  <div class="listing-item">
+                    <div class="left-image">
+                      <a href="#"><img src="assets/images/miracle.jpg" alt=""></a>
+                    </div>
+                    <div class="right-content align-self-center">
+                      <a href="#"><h4>7. Miracle Aesthetic Clinic</h4></a>
+                      <h6>by: Sale Agent</h6>
+                      <ul class="rate">
+                        <li><i class="fa fa-star-o"></i></li>
+                        <li><i class="fa fa-star-o"></i></li>
+                        <li><i class="fa fa-star-o"></i></li>
+                        <li><i class="fa fa-star-o"></i></li>
+                        <li><i class="fa fa-star-o"></i></li>
+                        <li>(24) Reviews</li>
+                      </ul>
+                      <span class="price"><div class="icon"><img src="assets/images/listing-icon-01.png" alt=""></div> Rp 1.000.000,00-Rp 20.000.000,00</span>
+                      <span class="details">Lokasi: <em>Jl. MH. Thamrin No. 40 Surabaya </em></span>
+                      <ul class="info">
+                        <li><img src="assets/images/dokter-icon.png" alt=""> dr. Imam</li>
+                        <li><img src="assets/images/jam-icon.webp" alt="">09:00 - 19:00</li>
+                      </ul>
+                      <div class="main-white-button">
+                        <a href="contact.html"><i class="fa fa-eye"></i> Contact Now</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-12">
+                  <div class="listing-item">
+                    <div class="left-image">
+                      <a href="#"><img src="assets/images/larissa.jpg" alt=""></a>
+                    </div>
+                    <div class="right-content align-self-center">
+                      <a href="#"><h4>8. Larissa Clinic</h4></a>
+                      <h6>by: Sale Agent</h6>
+                      <ul class="rate">
+                        <li><i class="fa fa-star-o"></i></li>
+                        <li><i class="fa fa-star-o"></i></li>
+                        <li><i class="fa fa-star-o"></i></li>
+                        <li><i class="fa fa-star-o"></i></li>
+                        <li><i class="fa fa-star-o"></i></li>
+                        <li>(15) Reviews</li>
+                      </ul>
+                      <span class="price"><div class="icon"><img src="assets/images/listing-icon-01.png" alt=""></div>Rp 500.000,00-Rp 15.000.000,00</span>
+                      <span class="details">Lokasi: <em>Jl. Residen Sudirman No.25-27, Pacar Keling, Kec. Tambaksari, Kota SBY</em></span>
+                      <ul class="info">
+                        <li><img src="assets/images/dokter-icon.png" alt=""> dr. Imam</li>
+                        <li><img src="assets/images/jam-icon.webp" alt=""> 09:00 - 19:00</li>
+                      </ul>
+                      <div class="main-white-button">
+                        <a href="contact.html"><i class="fa fa-eye"></i> Contact Now</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-12">
+                  <div class="listing-item">
+                    <div class="left-image">
+                      <a href="#"><img src="assets/images/listing-06.jpg" alt=""></a>
+                    </div>
+                    <div class="right-content align-self-center">
+                      <a href="#"><h4>9. Gloskin Clinic</h4></a>
+                      <h6>by: Sale Agent</h6>
+                      <ul class="rate">
+                        <li><i class="fa fa-star-o"></i></li>
+                        <li><i class="fa fa-star-o"></i></li>
+                        <li><i class="fa fa-star-o"></i></li>
+                        <li><i class="fa fa-star-o"></i></li>
+                        <li><i class="fa fa-star-o"></i></li>
+                        <li>(20) Reviews</li>
+                      </ul>
+                      <span class="price"><div class="icon"><img src="assets/images/listing-icon-01.png" alt=""></div> Rp 500.000,00-Rp 15.000.000,00</span>
+                      <span class="details">Lokasi: <em>Ruko Grand Sungkono, Jl. Mayjen Sungkono No.176-178, Dukuh Pakis, Kec. Dukuhpakis, Kota SBY</em></span>
+                      <ul class="info">
+                        <li><img src="assets/images/dokter-icon.png" alt=""> dr. Imam</li>
+                        <li><img src="assets/images/jam-icon.webp" alt=""> 09:00 - 19:00</li>
+                      </ul>
+                      <div class="main-white-button">
+                        <a href="contact.html"><i class="fa fa-eye"></i> Contact Now</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4">
+          <div class="about">
+            <div class="logo">
+              <img src="assets/images/HiBeautee!.png" alt="Plot Listing">
+            </div>
+            <p>Website HiBeautee! hadir sebagai solusi bagi masyarakat untuk merekomendasikan klinik 
+              untuk tempat treatment serta rekomendasi skincare dengan kemudahan informasi pemesanan berbasis online.</p>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="helpful-links">
+            <h4>Helpful Links</h4>
+            <div class="row">
+              <div class="col-lg-6 col-sm-6">
+                <ul>
+              
+                </ul>
+              </div>
+              <div class="col-lg-6">
+                <ul>
+                 
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="contact-us">
+            <h4>Contact Us for Business Inquiry</h4>
+            <p>Salma Fauziyah Firdaus</p>
+            <div class="row">
+              <div class="col-lg-6">
+                <a href="https://wa.me/082142635883">+62 821-4263-5883</a>
+              </div>
+              <div class="col-lg-6">
+                <a href="https://wa.me/082141241651">+62 821-4124-1651</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-12">
+          <div class="sub-footer">
+            <p>Copyright © 2023 HiBeautee!. All Rights Reserved.
+            <br>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- Scripts -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/owl-carousel.js"></script>
+  <script src="assets/js/animation.js"></script>
+  <script src="assets/js/imagesloaded.js"></script>
+  <script src="assets/js/custom.js"></script>
+
+</body>
+
+</html>
